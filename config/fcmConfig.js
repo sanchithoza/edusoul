@@ -1,0 +1,1 @@
+exports.serverKey = 'AAAAOfyNsfo:APA91bH6rvc91KMBwR2Tz5MW0mq54kXc60jZC_YXnkbApjtSkF5-Rm9wSLoQSuYp6xnogMd68hLcGpgye_DSWeaBQDhMTWtZT3XZ3Uyix_odFwDrbCy_8TQAuJyhBLV9aX5psGVR9HaZ';
