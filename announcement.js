@@ -33,10 +33,16 @@ module.exports.sendNotification = (event, context, callback) => {
 
   const response = {
     statusCode: 200,
+    isBase64Encoded: false,
+    headers: {
+        "Content-Type": "*/*"
+    },
     body: JSON.stringify({
       message: 'Announcement Sent'
     }),
   };
+
+  //console.log(response);
 
   callback(null, response);
 

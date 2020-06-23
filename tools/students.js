@@ -57,8 +57,10 @@ module.exports.getStudents = function (body,type,catag, callback) {
                             }
                         });
                     }
+                    con.release();
                 })
                 .catch((err) => {
+                    con.release();
                     callback(err);
                 });
             });
@@ -87,8 +89,10 @@ module.exports.getStudent = function (body,catag) {
                 // sending notificatin to receiver
                 sendFCMone(value.gcm_token,body,catag);
             });
+            con.release();
         })
         .catch((err) => {
+            con.release();
             callback(err);
         });
     })
@@ -158,8 +162,10 @@ module.exports.getStudentForAttendance = function (body,catag) {
                                 // sending notification to parent
                                 sendFCMone(value.gcm_token,data1,catag);
                             });
+                            con.release();
                         })
                         .catch((err) => {
+                            con.release();
                             console.log(err);
                         });
                     });
